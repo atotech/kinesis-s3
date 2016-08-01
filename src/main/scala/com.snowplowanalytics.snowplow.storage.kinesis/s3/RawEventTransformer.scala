@@ -39,7 +39,7 @@ class RawEventTransformer extends ITransformer[ ValidatedRecord, EmitterInput ] 
   lazy val deserializer = new TDeserializer()
 
   override def toClass(record: Record): ValidatedRecord = {
-    log.info("Converting one record to EmitterInput before adding it to the buffer")
+    //log.info("Converting one record to EmitterInput before adding it to the buffer")
     record.getData.array.success
   }
 
